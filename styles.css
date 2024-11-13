@@ -1,0 +1,224 @@
+/* Background Image Settings */
+body {
+    background-image: url('tulips3.jpg'); /* Replace with your image path */
+    background-size: cover;       /* Ensures the image covers the entire viewport */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  
+    background-attachment: fixed; /* Keeps the image fixed during scroll */
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    z-index: -1;
+}
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Button and Select Animation */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ae58a0;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #b769a6;
+    transform: scale(1.05);
+}
+
+select {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    outline: none;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+select:hover {
+    background-color: #f6f6f6;
+}
+
+/* Text Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #c490c4;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 0.8s linear infinite;
+    margin-top: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* GIF Positioning */
+.gif {
+    width: 150px;   
+    height: auto;
+    position: absolute;
+    z-index: 1;  
+    opacity: 0.8;  
+}
+
+/* Basic hover effect to scale the GIF */
+.gif {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gif:hover {
+    transform: scale(1.1);  
+    opacity: 0.9;  
+}
+
+.gif:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+}
+
+/* Positioning each GIF */
+.gif-upper-left {
+    top: 10px;
+    left: 10px;
+}
+
+.gif-middle-left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.gif-lower-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.gif-upper-right {
+    top: 10px;
+    right: 10px;
+}
+
+.gif-middle-right {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.gif-lower-right {
+    bottom: 10px;
+    right: 20px;
+}
+/* Envelope Icon Styling */
+#envelope-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#envelope {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#developer-message {
+    text-align: justify;
+    text-justify: inter-word;  
+    line-height: 1.6;  
+    padding: 10px;  
+}
+
+#envelope:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styling for Predefined Message */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.paper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#close-btn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#message-content {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    max-height: 300px;  /* Set a max height */
+    overflow-y: auto;  /* Allow scrolling if the content is too long */
+}

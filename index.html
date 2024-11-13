@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affirmation Hub 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="upper-left.gif" class="gif gif-upper-left" alt="Upper Left GIF">
+    <img src="middle-left.gif" class="gif gif-middle-left" alt="Middle Left GIF">
+    <img src="lower-left.gif" class="gif gif-lower-left" alt="Lower Left GIF">
+    <img src="upper-right.gif" class="gif gif-upper-right" alt="Upper Right GIF">
+    <img src="middle-right.gif" class="gif gif-middle-right" alt="Middle Right GIF">
+    <img src="lower-right.gif" class="gif gif-lower-right" alt="Lower Right GIF">
+    
+    
+    <div class="container">
+        <h1>Hello, Babeee~~~</h1>
+        <p>Select your current mood hehe:</p>
+        <select id="moodSelector">
+            <option value="happy">Happy</option>
+            <option value="relaxed">Relaxed</option>
+            <option value="stressed">Stressed</option>
+            <option value="irritated">Irritated</option>
+            <option value="sad">Sad</option>
+            <option value="frustrated">Frustrated</option>
+            <option value="tired">Tired</option>
+            <option value="excited">Excited</option>
+            <option value="pikon">Pikon</option>
+            <option value="angry">Angry</option>
+
+
+        </select>
+        <button onclick="generateAffirmation()">Get Message</button>
+        
+        <h2 id="affirmation" class="fade-in"></h2>
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+    
+        <!-- Envelope Icon placed below the affirmation message -->
+        <div id="envelope-container">
+            <img src="envelope.png" id="envelope" alt="Envelope Icon" />
+        </div>
+    </div>
+    
+    <!-- Predefined Message Modal -->
+    <div id="message-modal" class="modal">
+        <div class="paper-content">
+            <span id="close-btn">&times;</span>
+            <div id="message-content">
+                <!-- Developer's message goes here -->
+                <p id="developer-message">Hello, babe! How are you? Hehe, surprise? Eto po yung project na ginagawa ko haha. And no, it wasn't for another girl, duh? Obviously, it's for you 😅. Feel ko na sense mo man ata haha. You can take a sigh of relief knowing hinde po ako baliko haha. It's a semi-basic project for me to refresh my web development skills, but I also wanted to make something kinda special for you. You know, just because. Words of affirmation pala love language mo ahh, eto oh affirmation generator HAHAHAHAHAHA.<br> <br> 
+
+                    I was actually planning to add a Spotify widget here, but it's way beyond my abilities for now, haha. Anyways, I hope you like it! The messages are kind of limited right now because I typed most of them myself (some are from the internet haha), but I'll update it next time. Bear with them for now po hehe.<br> <br> 
+                    
+                    I created this website especially for you because I know how helpful a few kind words can be. When you're feeling down or just need a little reassurance, I want you to have a place where you can find comfort and encouragement. I know you have your friends and me to talk to, but when you don't feel like talking to anyone, you can always come here. :>>> <br> <br> 
+                    
+                    Every message is a reminder of how much you are cherished, valued, and appreciated. No matter what kind of day you're having or what mood you're in, remember that brighter days are ahead. You've come this far for a reason, and we're all so proud and thankful to have you here. I know you're a Miss Independent girlie, but this is my way of reminding you that you're never alone. I'm always here cheering you on and supporting you. <br> <br> 
+                    
+                    Good luck with your exams and final requirements! I know it's a stressful time, but remember to take breaks when you need them. Stay hydrated, drink plenty of water, and don't forget to eat — even if you're busy. <br> <br> 
+
+                    Please tell me if there is anything I could help haha. I know I said some things that were harsh when you asked for my help, and I'm really sorry for that. I understand why you might not want my help now or ever, but I genuinely feel bad and wish I could make it up to you. If there’s any way I can support or help you, even in the smallest way, please let me know ;3. <br> <br>
+                    
+                    I know how you get when exams are near. But I hope you don't push yourself too hard. Remember, you are more important than your grades (even though I know you might disagree with me on that haha). The point is, please take care of yourself. Your well-being matters the most. You've got this! Just know that I'm cheering for you every step of the way woooooo!!! <br> <br> 
+                    
+                    Dapat maganda din reaction mo ha, bantay ka lang.
+                    </p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
